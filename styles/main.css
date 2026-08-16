@@ -1,0 +1,437 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: "Archivo Black", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+/*main pages*/
+body {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  /*hides horizontal scrollbar*/
+  overflow-x: hidden;
+}
+.header {
+  display: flex;
+  position: fixed;
+  top: 0;
+  z-index: 10; /*mengatur tumpukan elemen*/
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.63);
+  box-sizing: border-box;
+  background: rgba(255, 255, 255, 0.09);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  padding: 10px 28px;
+  width: 100vw;
+  justify-content: space-between;
+  align-items: center;
+}
+.header a {
+  text-decoration: none; /*menghilangkan garis bawah pada link*/
+  color: #111;
+  font-size: 20px;
+}
+.hidden {
+  visibility: hidden;
+}
+.header-pc {
+  display: flex;
+  gap: 45px;
+  flex-direction: row;
+}
+@media (max-width: 768px){
+  .header-pc {
+    position: absolute;
+    top:100px;
+    visibility: hidden;
+  }
+}
+.github {
+  margin-left: auto;
+  margin-right: 20px
+}
+.github img {
+  width: 32px;
+  height: 32px;
+  display: block;
+}
+.dropdown-btn {
+  background: #2d2d2e;
+  align-items: center;
+  border-radius: 5px;
+  font-size: 16px;  
+  color: #fff;
+  border: 2px solid #2d2d2e;
+  padding: 20px 20px;
+  cursor: pointer;
+  visibility: hidden;
+}
+/*animasi pada text dropdown*/
+.dropdown-btn-text {
+  margin: 0;
+  font-family: bold;
+  animation: rotate 0.8s ease, rotatesback 0.8s ease;
+}
+@keyframes rotatesback {
+  from {
+    transform: rotate(180deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+@keyframes rotate {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(180deg);
+  }
+}
+.dropdown-btn:hover {
+  background: #fefeff;
+  color: #2d2d2e;
+  border: 2px solid #2d2d2e;
+}
+@media (max-width: 768px){
+  .dropdown-btn{
+    visibility: visible;
+  }
+}  
+.dropdown ul {
+  list-style: none; /*menghilangkan bullet pada list*/
+  margin: 0;
+  padding: 0;
+}
+.dropdown li a {
+  display: block;
+  padding: 15px 20px;
+  text-decoration: none; /*menghilangkan garis bawah pada link*/
+  color: #111;
+  text-align: center;
+  font-size: 20px;
+  border-bottom: 2px solid #0000005b; /*garis bawah pada link*/
+}
+.dropdown li a:hover {
+  color: #2d2d2e;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.63);
+  font-size: 25px;
+}
+
+.dropdown {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.63);
+  width: 100vw;
+  /*animasi*/
+  opacity: 0;
+  transform: translateY(-20px);
+  visibility: hidden;
+  transition: all 0.5s ease;
+  z-index: 9;
+}
+.dropdown.show {
+  opacity: 1;
+  transform: translateY(0);
+  visibility: visible;
+  background: rgba(253, 253, 253, 0.22);
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  border: 1px solid rgba(253, 253, 253, 0.4);
+  top: 80px;
+} 
+.sign-in-btn {
+  text-align: center;
+  font-size: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+.sign {
+  background: #2d2d2e;
+  color: #fff;
+  border: 2px solid #2d2d2e;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+.sign:hover {
+  background: #fefeff;
+  color: #2d2d2e;
+  border: 2px solid #2d2d2e;
+}
+.main {
+  display: flex;
+  position: sticky;
+  min-height: 100vh;
+  width: 100vw;
+  top: 0;
+  justify-content: center;
+}
+.main > h1 {
+  margin: 0 0 16px 0;
+  font-size: 20px;
+}
+.scroll-down {
+  margin: 0;
+  font-weight: bold;
+  font-family: sans-serif;
+  font-size: 18px;
+  animation: fadeIn 1s ease-in-out infinite;
+}
+@keyframes fadeIn {
+  0% {
+    transform: translateY(10px); /* Mulai dari bawah */
+  }
+  50% {
+    transform: translateY(0px);  /* Naik mulus ke atas */
+  }
+  100% {
+    transform: translateY(10px); /* Turun mulus balik ke posisi awal */
+  }
+}
+.section-1 {
+  background-color: #E3F2FD;
+  align-items: center;
+  flex-direction: column;
+}
+.section-1 > p {
+  font-size: 18px;
+  margin: 0;
+  font-family: bold;
+}
+.section-2 {
+  display: flex;
+  background-color: rgb(144, 202, 249, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: rgb(0, 0, 0);
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.section-2 h1{
+  font-size: 30px;
+}
+.section-2 p {
+  gap: 20px
+}
+.button {
+  display: flex;
+  gap: 10px;
+  flex-direction: row;
+}
+.button a {
+  text-decoration: none;
+}
+@media (max-width: 768px){
+  .button{
+    align-items: center;
+    flex-flow: row wrap;
+  }
+}  
+.discord {
+  display: flex;
+  align-items: center;
+  background-color: #7289DA;
+  border-radius: 3px;
+  border: 2px solid #2d2d2e;
+  cursor: pointer;
+  color:#000000;
+  padding: 10px 15px;
+}
+.discord img{
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.discord:hover{
+  background-color: #002BFF;
+  color: #ebebeb;
+}
+.discord:hover img {
+    filter: brightness(0) invert(1);
+}
+.whatsapp {
+  display: flex;
+  align-items: center;
+  background-color: #075E54;
+  border-radius: 3px;
+  border: 2px solid #2d2d2e;
+  cursor: pointer;
+  color:#000000;
+  padding: 10px 15px;
+}
+.whatsapp img{
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.whatsapp:hover{
+  background-color: #128C7E;
+  color: #ebebeb;
+}
+.whatsapp:hover img {
+    filter: brightness(0) invert(1);
+}
+.youtube {
+  display: flex;
+  align-items: center;
+  background-color: #FFA5A5;
+  border-radius: 3px;
+  border: 2px solid #2d2d2e;
+  cursor: pointer;
+  color:#000000;
+  padding: 10px 15px;
+}
+.youtube img{
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.youtube:hover{
+  background-color: #DF0303;
+  color: #ebebeb;
+}
+.youtube:hover img {
+    filter: brightness(0) invert(1);
+}
+.section-3 {
+  background-color: rgb(33, 150, 243, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: rgb(0, 0, 0);
+  gap: 50px;
+  align-items: center;
+  flex-direction: column;
+  height: auto;
+}
+.reddit {
+  display: flex;
+  align-items: center;
+  background-color: #FF8B60;
+  border-radius: 3px;
+  border: 2px solid #2d2d2e;
+  cursor: pointer;
+  color:#000000;
+  padding: 10px 15px;
+}
+.reddit img{
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.reddit:hover{
+  background-color: #FF4500;
+  color: #ebebeb;
+}
+.reddit:hover img {
+    filter: brightness(0) invert(1);
+}
+.facebook {
+  display: flex;
+  align-items: center;
+  background-color: #8B9DC3;
+  border-radius: 3px;
+  border: 2px solid #2d2d2e;
+  cursor: pointer;
+  color:#000000;
+  padding: 10px 15px;
+}
+.facebook img{
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.facebook:hover{
+  background-color: #3B5998;
+  color: #ebebeb;
+}
+.facebook:hover img {
+    filter: brightness(0) invert(1);
+}
+.instagram {
+  display: flex;
+  align-items: center;
+  background: linear-gradient(133deg,rgba(79, 91, 213, 1) 0%, rgba(150, 47, 191, 1) 25%, rgba(214, 41, 118, 1) 52%, rgba(250, 126, 30, 1) 77%, rgba(254, 218, 117, 1) 100%);
+  border-radius: 3px;
+  border: 2px solid #2d2d2e;
+  cursor: pointer;
+  color:#000000;
+  padding: 10px 15px;
+}
+.instagram img{
+  display: block;
+  width: 20px;
+  height: 20px;
+}
+.instagram:hover{
+  background: linear-gradient(313deg, rgba(79, 91, 213, 1) 0%, rgba(150, 47, 191, 1) 25%, rgba(214, 41, 118, 1) 52%, rgba(250, 126, 30, 1) 77%, rgba(254, 218, 117, 1) 100%); 
+  color: #ebebeb;
+}
+.instagram:hover img {
+    filter: brightness(0) invert(1);
+}
+.section {
+  display: flex;
+  background-color: rgba(255, 255, 255, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  position: relative;
+  align-items: center;
+  border: 1px solid #030303;
+  border-radius: 8px;
+  color: #0a0a0a;
+  width: min(700px, 90%);
+  min-height: 50px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+}
+.card-1 {
+  min-height: 120px;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.card-2 {
+  min-height: 100px;
+  flex-direction: column;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+}
+.footer {
+  position: sticky;
+  background: rgb(13, 71, 161, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  color: #fff;
+  box-shadow: 0 -2px 10px rgb(33, 150, 243, 0.8);
+  box-sizing: border-box;
+  text-align: center;
+  min-height: 100px;
+  gap: 50px;
+  align-items: center;
+  width: 100vw;
+}
+.hidden {
+  visibility: hidden;
+}
+.footer ul {
+  list-style: none;
+}
+.footer li a {
+  gap: 20px;
+  font-size: 20px;
+  color: #f7e600;
+}
+.copyright {
+  color: red
+}

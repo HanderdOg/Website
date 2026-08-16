@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Handerd Website</title>
+    <!--css-->
+    <link rel="stylesheet" href="styles/main.css">
+    <link rel="stylesheet" href="styles/aos.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="apple-touch-icon" sizes="180x180" href="images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="images/favicon/site.webmanifest">
+  </head>
+  <body>
+    <!--bisa tambah logo jika perlu-->
+    <div class="header">
+      <p class="hidden">p</p>
+      <div class="header-pc">
+        <a href="#">home</a>
+        <a href="#community">Community</a>
+        <a href="#about">About Me</a>
+        <a href="#">Project</a>
+        <a href="#contact">Contact</a>
+      </div>
+      <a href="https://github.com/HanderdOg" class="github">
+        <img src="images/github.svg" alt="github">
+      </a>
+      <button id="dropdown-btn" class = "dropdown-btn">
+      <p class="dropdown-btn-text" id="text-dropdown-btn">=</p>
+    </button>
+    </div>
+    <div id="dropdown" class="dropdown">
+      <ul>
+      <li><a href="#">Home </a></li>
+      <li><a href="#community">Community</a></li>
+      <li><a href="#about">About Me</a></li>
+      <li><a href="#contact">Contact</a></li>
+      </ul>
+      <!--<h1 class = "sign-in-btn"><a href="Login-Section/Sign-In.html"><button class="sign">Sign In</button></a></h1>-->
+    </div>
+    <div class="main section-1">
+      <h1 data-aos="zoom-in-down" data-aos-duration="1000" once="true">Welcome!</h1>
+      <h1 data-aos="zoom-in-down" data-aos-duration="1500" once="true">Thanks for visiting!</h1>
+      <p data-aos="zoom-in-down" data-aos-duration="2000" once="true">scroll down</p>
+      <p class="scroll-down" data-aos="fade-down" data-aos-duration="2500">▼</p>
+    </div>    
+    <div class="main section-2" data-aos="fade-up" data-aos-duration="1000" id="community">
+      <h1 data-aos="fade-up" data-aos-duration="1500">Join Our Community</h1>
+      <p data-aos="fade-up" data-aos-duration="2000">Looking for people to play with or just hang out? Come join us and make yourself at home.</p>
+      <div class="button">
+        <a href="https://discord.gg/tsG8uxYgj"><button class="discord" data-aos="fade-up" data-aos-duration="2500"><img src="images/discord.svg" alt="discord">Discord</button></a>
+        <a href="https://chat.whatsapp.com/B9Q9aiamquCISysRP3v5CQ"><button class="whatsapp" data-aos="fade-up" data-aos-duration="2500"><img src="images/whatsapp.svg" alt="whatsapp">Whatsapp</button></a>
+      </div>
+    </div>
+    <div class="main section-3" id="about">
+        <h1 data-aos="fade-up" data-aos-duration="500">Hi, I'm Handerd.</h1>
+      <div class="section card-1" data-aos="fade-up" data-aos-duration="1000">
+        <h1>What I'm learning</h1>
+        <p>Currently learning more about Node.js, Express,</p>
+        <p>TypeScript, server security, GDscript, and web development.</p>
+      </div>
+      <div class="section card-2" data-aos="fade-up" data-aos-duration="1500">
+        <h1>Sosial Media</h1>
+        <div class="button">
+        <a href="https://www.reddit.com/user/DisastrousBus8471/"><button class="reddit"><img src="images/reddit.svg" alt="reddit">Reddit</button></a>
+        <a href="https://www.facebook.com/profile.php?id=61564360529901"><button class="facebook"><img src="images/facebook.svg" alt="facebook">Facebook</button></a>
+        <a href="https://www.instagram.com/ihsan_nob/"><button class="instagram"><img src="images/instagram.svg" alt="instagram">Instagram</button></a>
+        <a href="https://www.youtube.com/@ihsannoob131"><button class="youtube"><img src="images/youtube.svg" alt="youtube">Youtube</button></a>
+        </div>
+      </div>
+    </div>
+    <div class="footer" id="contact">
+       <p class="hidden">p</p>
+       <h1>Contact</h1>
+       <ul>
+        <li><a href="https://discord.com/users/781372132378017815">Discord : ichan1301</a></li>
+        <li><a href="https://wa.me/6289637903648">WhatsApp : +62 896-3790-3648</a></li>
+        <li><a href="mailto: contact@handerd.online">Email : contact@handerd.online </a></li>
+       </ul>
+       <p class="hidden">p</p>
+       <p>Keep building. Keep creating.</p>
+       <p>Made with ❤️ and probably too much debugging.</p>
+       <p class="copyright">&copy; 2026 HanderdOg. All rights reserved.</p>
+    </div>
+  <script src="scripts/aos.js"></script>
+  <script src="scripts/main.js"></script>
+  </body>
+</html>

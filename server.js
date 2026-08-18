@@ -38,10 +38,15 @@ app.use(express.json());
 
 app.use(express.static(path.join(__dirname)));
 
+app.get("/", (req, res) => {
+    res.sendFile(path.join(__dirname, "eng.html"))
+});
+app.get("/id", (req, res) => {
+    res.sendFile(path.join(__dirname, "id.html"))
+});
 app.use((req, res, next) => {
     // Mengirim status 404 dengan format JSON
     res.status(404).json({
-        status: 404,
         message: "Halaman atau API tidak ditemukan"
     });
 });

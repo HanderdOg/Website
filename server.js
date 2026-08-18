@@ -47,7 +47,7 @@ app.get("/id", (req, res) => {
 app.use((req, res, next) => {
     // Mengirim status 404 dengan format JSON
     res.status(404).json({
-        message: "Halaman atau API tidak ditemukan"
+        message: "Pages not found"
     });
 });
 
